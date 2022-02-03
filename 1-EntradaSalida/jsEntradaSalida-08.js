@@ -1,4 +1,6 @@
 /*
+Tomás Agustín Lo Sasso Greco
+e/s 8
 Debemos lograr tomar Los numeros por ID ,
 transformarlos a enteros (parseInt),realizar la operación correcta y 
 mostrar el resto entre el dividendo y el divisor.
@@ -7,15 +9,15 @@ function SacarResto()
 {
 	let numeroDividendo;
 	let numeroDivisor;
-	let sacarResto;
+	let resultado;
 
-	numeroDividendo = parseInt(document.getElementById("txtIdNumeroDividendo").value);
+	numeroDividendo = document.getElementById("txtIdNumeroDividendo").value;
+	numeroDivisor = document.getElementById("txtIdNumeroDivisor").value;
 
-	numeroDivisor = parseInt(document.getElementById("txtIdNumeroDivisor").value);
+	numeroDividendo = parseInt(numeroDividendo);
+	numeroDivisor = parseInt(numeroDivisor);
 
-	sacarResto =  parseInt (numeroDividendo / numeroDivisor);
+	resultado = numeroDividendo % numeroDivisor;
 
-	sacarResto = numeroDividendo - (sacarResto * numeroDivisor);
-
-	alert ("el resto es " + sacarResto );
+	alert ("el resto es  " + resultado);
 }
