@@ -16,67 +16,121 @@ function mostrar()
 	}		
 	*/
 
-	let edadIngresada;
-	let nombreIngresado;
-	let mensaje;
-	let numeroPar;
+/*
+Ejercicio 07 BIS V1 (Realizar en los archivos  del ejercicio 07 del IF)
+A.si es menor de 13 , mostrar el mensaje “feliz día”.
+B.Si es adolescente el mensaje es “usted es adolescente”)
+C.si tiene 17 años además mostrar el mensaje “último año!!!”
+D.Si es mayor de edad mostrar el mensaje “tienes edad de laburar”.
+E.si tiene 33 años , además mostrar el mensaje “como cristo”
+F.si tiene más de 60 años, además mostrar el mensaje “A jubilarse”.
+G.si tiene 88, además mostrar el mensaje “lindo número''
+H.si la edad es par , además mostrar , “sos par!!
+I.si se llama ‘Violeta’ y es adolescente , sumar el mensaje ‘como un color!!’
+J.si se llama ‘Ricardo’ y es un menor a 13 , sumar el mensaje ‘muy chiquito para ese nombre’
+K.si se llama ‘Alfredo’ y esta para jubilarse , sumar el mensaje ‘como el de 	QUEEN’
+L.Si no es menor de 13 y está casado , además mostrar el mensaje ‘casada quiere casa
+M.Si sos soltero y mayor de edad y no tienes edad para jubilarse , sumar el mensaje ‘a salir)
+N.Si sos divorciado y sos adolescente, además mostrar ‘toda una vida por delante’
+*/
 
-	edadIngresada = document.getElementById("txtIdEdad").value;
-	edadIngresada = parseInt (edadIngresada);
-	nombreIngresado = prompt("Ingresa tu nombre");
+let edadIngresada;
+let estadoCivil;
+let mensaje;
+let nombreIngresado;
+let resto;
 
-	if(edadIngresada < 13) // A
-	{
-		mensaje = "Feliz día";
-	}
-	else
-	{
-			if(edadIngresada <18) // B
-		{
-				mensaje = mensaje + "Usted es adolescente";
-		}
-			if(edadIngresada == 17)
-		{
-				mensaje = mensaje + " y es su ultimo año";
-	}
-	
-	else
-	{
-			if(edadIngresada == 17)
-		{
-				mensaje = mensaje + "Tenes edad de laburar";
-		}
+edadIngresada=parseInt(document.getElementById('txtIdEdad').value);
+estadoCivil=document.getElementById('estadoCivil').value;
+nombreIngresado=prompt("Ingrese nombre");
 
-	else
-	{
-			if(edadIngresada == 33) // C
-			{
-				mensaje = mensaje + "como cristo";
-			}
-	else 
-			{	
-			if(edadIngresada >60)
-			{
-				mensaje = mensaje + "A jubilarse";
-			}
-	else
+if(edadIngresada<13)
+ 
+  {
+	  mensaje=("Feliz dia.");
+	  if (nombreIngresado=="Ricardo") 
+	  {
+		  mensaje=mensaje+" Muy chiquito para ese nombre ";
+	  }
+  }
+  else
+  {
+	 if(edadIngresada<18) 
+	 { 
+		mensaje=("Usted es adolescente.");
+		if (estadoCivil=="Divorciado") 
 		{
-			if(edadIngresada == 88)
-			{
-				mensaje = mensaje + "lindo numero";
-			}		
+			mensaje=mensaje+" Toda una vida por delante.";
 		}
-      }
-	}
-}	
-	numeroPar = edadIngresada % 2;
-	if(numeroPar == 0)
-	{
-	mensaje = mensaje + " y sos par!!";
-	}
-	
-	alert(mensaje);
+		if (nombreIngresado=="Violeta") 
+		{
+		   mensaje=mensaje+" Como un color!!";
+		}
+		if (edadIngresada==17) 
+		{
+		   mensaje=mensaje + " , ultimo año!!!";
+		}
+		else
+		{
+
+		}
+	 }
+	 else
+	 {
+		 if (edadIngresada>=18) 
+		 {
+		   mensaje=("Tiene edad de laburar.");
+		   if (estadoCivil="Soltero") 
+		   {
+			   mensaje=mensaje+" A salir.";
+		   }
+		   if (edadIngresada==33) 
+		   {
+				mensaje=mensaje+" Tiene la edad de cristo.";
+		   }
+		   else
+		   {
+			 if (edadIngresada>60) 
+			 {
+				 mensaje=mensaje+" A jubilarse!";
+				 if (nombreIngresado=="Alfredo") 
+				 {
+					mensaje=mensaje+" como el de QUUEN";
+				 }
+				 if (edadIngresada==88) 
+				 {
+					 mensaje=mensaje+" lindo numero";
+				 }
+				 else
+				 {
+
+				 }
+			 }
+			 else
+			 {
+
+			 }
+		   }
+		 }
+		 else
+		 {
+
+		 }
+	 }
+	 if (estadoCivil=="Casado") 
+	 {
+		 mensaje=mensaje+" casada quiere casa";
+	 }
+	 
+  }
+  
+resto = edadIngresada % 2;
+if(resto == 0)
+{
+	mensaje = mensaje + " y sos par";
 }
+
+alert(mensaje);
 }//FIN DE LA FUNCIÓN
 
 
