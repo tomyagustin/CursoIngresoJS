@@ -1,11 +1,143 @@
 /*
+3)Nos ingresan una cantidad indeterminada de estadías de  vacaciones, 
+validando los datos ingresados:
+
+nombre del titular ,lugar ( “Puerto Madryn”, “Villa Gessel” o “Córdoba”),temporada(“otoño”,“invierno”, “verano”,“primavera”),cantidad de días que durará el viaje.
+informar:
+a)el lugar más elegido //contador a cada uno
+b)el nombre del titular que más días viaje. /bandera maximo
+c)el promedio de días por viaje, de la temporada verano. // if(temporada == "verano")
+*/
+function mostrar()
+{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 En el ingreso a un viaje en avion nos solicitan nombre , edad, sexo("f" o "m") y estado civil("soltero", "casado" o "viudo")y temperatura corporal.
 a) El nombre de la persona con mas temperatura.
 b) Cuantos mayores de edad estan viudos
 c) La cantidad de hombres que hay solteros o viudos.
 d) cuantas personas de la tercera edad( mas de 60 años) , tienen mas de 38 de temperatura
 e) El promedio de edad entre los hombres solteros.
-*/
+
 function mostrar()
 {
 	let nombre;
@@ -143,3 +275,4 @@ function mostrar()
 
 	document.write(mensaje);
 }
+*/

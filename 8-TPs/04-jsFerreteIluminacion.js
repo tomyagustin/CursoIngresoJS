@@ -11,7 +11,7 @@ Tomás Agustín Lo Sasso Greco
 tp 4 A,B,C,D
  
 function CalcularPrecio () /*
-{ // IF
+{ // IF + IF
 
  	let numeroLamparitas;
     let descuento;
@@ -359,18 +359,11 @@ function CalcularPrecio ()
     precioFinal = precio - precio * descuento /100;   
 
     if(precioFinal > 120 )
-
-
     { 
-
     IIBB = precioFinal * 10/100;
-
     precioFinal = precioFinal + IIBB
-
     alert("Usted pago " +IIBB +" de IIBB");
-
     }
-
 
     document.getElementById("txtIdprecioDescuento").value=precioFinal;
 

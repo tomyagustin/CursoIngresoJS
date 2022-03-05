@@ -40,7 +40,7 @@ let mensaje;
 let nombreIngresado;
 let resto;
 
-edadIngresada=parseInt(document.getElementById('txtIdEdad').value);
+edadIngresada=parseInt(document.getElementById('txtIdEdad')).toLowerCase().value;
 estadoCivil=document.getElementById('estadoCivil').value;
 nombreIngresado=prompt("Ingrese nombre");
 
@@ -62,7 +62,7 @@ if(edadIngresada<13)
 		{
 			mensaje=mensaje+" Toda una vida por delante.";
 		}
-		if (nombreIngresado=="Violeta") 
+		if (nombreIngresado==" violeta") 
 		{
 		   mensaje=mensaje+" Como un color!!";
 		}

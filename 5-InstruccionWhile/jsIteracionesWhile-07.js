@@ -50,7 +50,7 @@ Realizar el algoritmo que permita el ingreso por prompt de
 
 	2da PARTE
 	d)el primer alumno aprobado
-	e)el nombre y edad de la máxima temperatura registrada
+	e)el nombre y edad de la máxima temperatura registrada 
 	f)la altura y nota  del no binario mas joven
 
 	3ra PARTE
@@ -123,24 +123,28 @@ function mostrar() {
 	cantidadAprobados = 0;
 
 	//LOGICA
-	while (continuar == true) {
+	while (continuar == true) 
+	{
 		altura = prompt("Dame una altura");
 		altura = parseInt(altura);
-		while (isNaN(altura) == true || altura < 0 || altura > 250) {
+		while (isNaN(altura) == true || altura < 0 || altura > 250)
+		{
 			altura = prompt("Error. Dame una altura");
 			altura = parseInt(altura);
 		}
 
 		edad = prompt("Dame una edad");
 		edad = parseInt(edad);
-		while (isNaN(edad) == true || edad < 18) {
+		while (isNaN(edad) == true || edad < 18) 
+		{
 			edad = prompt("Error. Dame una edad");
 			edad = parseInt(edad);
 		}
 
 		temperatura = prompt("Dame una temperatura");
 		temperatura = parseInt(temperatura);
-		while (isNaN(temperatura) == true || temperatura < 35 || temperatura > 42) {
+		while (isNaN(temperatura) == true || temperatura < 35 || temperatura > 42) 
+		{
 			temperatura = prompt("Error. Dame una temperatura");
 			temperatura = parseInt(temperatura);
 		}
@@ -148,32 +152,38 @@ function mostrar() {
 		sexo = prompt("Dame un sexo");
 		sexo = sexo.toUpperCase(); // PASA TODO A MAYUSCULA
 		//sexo = sexo.toLowerCase(); // PASA TODO A MINUSCULA
-		while (sexo != "F" && sexo != "M" && sexo != "NB") {
+		while (sexo != "F" && sexo != "M" && sexo != "NB") 
+		{
 			sexo = prompt("Error. Dame un sexo");
 			sexo = sexo.toUpperCase();
 		}
 
 		nota = prompt("Dame una nota");
 		nota = parseInt(nota);
-		while (isNaN(nota) == true || nota < 0 || nota > 10) {
+		while (isNaN(nota) == true || nota < 0 || nota > 10) 
+		{
 			nota = prompt("Error. Dame una nota");
 			nota = parseInt(nota);
 		}
 
 		nombre = prompt("Dame un nombre");
-		while (nombre == "") {
+		while (nombre == "") 
+		{
 			nombre = prompt("Error. Dame un nombre");
 		}
 
 		//contadorF = contadorF + 1;
 		//acumuladorEdadF = acumuladorEdadF + edad;
-		switch (sexo) {
+		switch (sexo) 
+		{
 			case "M":
 				contadorM++;
 				acumuladorEdadM += edad;
 
-				if (nota < 4) {
-					if (banderaDelMdesapBajo == true && altura < 160) {
+				if (nota < 4) 
+				{
+					if (banderaDelMdesapBajo == true && altura < 160) 
+					{
 						nombreDelMdesapBajo = nombre;
 
 						banderaDelMdesapBajo = false;
@@ -185,7 +195,8 @@ function mostrar() {
 				contadorF++;
 				acumuladorEdadF += edad;
 
-				if (nota >= 4) {
+				if (nota >= 4) 
+				{
 					if (banderaFmasAlta == true || altura > alturaFmasAlta) {
 						alturaFmasAlta = altura;
 						nombreFmasAlta = nombre;
@@ -199,7 +210,8 @@ function mostrar() {
 				contadorNB++;
 				acumuladorEdadNB += edad;
 
-				if (banderaNBmasJoven == true || edad < edadMasNBmasJoven) {
+				if (banderaNBmasJoven == true || edad < edadMasNBmasJoven) 
+				{
 					edadMasNBmasJoven = edad;
 					alturaNBmasJoven = altura;
 					notaNBmasJoven = nota;
@@ -209,26 +221,31 @@ function mostrar() {
 				break;
 		}
 
-		if (temperatura > 37) {
+		if (temperatura > 37) 
+		{
 			//ACA TIENE FIEBRE
 			contadorConFiebre++;
 		} else {
 			contadorSinFiebre++;
 		}
 
-		if (nota >= 4) {
+		if (nota >= 4) 
+		{
 			//APROBADOS
 			cantidadAprobados++;
-			if (miPrimerAlumnoAprobado == true) {
+			if (miPrimerAlumnoAprobado == true) 
+			{
 				nombreDelPrimerAprobado = nombre;
 				miPrimerAlumnoAprobado = false;
 			}
-		} else {
+		} else 
+		{
 			//DESAPROBADOS
 			cantidadDesaprobados++;
 		}
 
-		if (banderaMaximaTemperatura == true || temperatura > temperaturaMaxima) {
+		if (banderaMaximaTemperatura == true || temperatura > temperaturaMaxima) 
+		{
 			temperaturaMaxima = temperatura;
 			nombreDeLaMaximaTemp = nombre;
 			edadDeLaMaximaTemp = edad;
@@ -243,17 +260,20 @@ function mostrar() {
 
 	let mensaje = "";
 
-	if (contadorM > 0) {
+	if (contadorM > 0) 
+	{
 		promedioEdadM = acumuladorEdadM / contadorM;
 		mensaje += "El promedio de Edad de los masculinos es: " + promedioEdadM + "\n";
 	}
 
-	if (contadorF > 0) {
+	if (contadorF > 0) 
+	{
 		promedioEdadF = acumuladorEdadF / contadorF;
 		mensaje += "El promedio de Edad de los femenino es: " + promedioEdadF + "\n";
 	}
 
-	if (contadorNB > 0) {
+	if (contadorNB > 0) 
+	{
 		promedioEdadNB = acumuladorEdadNB / contadorNB;
 		mensaje += "El promedio de Edad de los no binario es: " + promedioEdadNB + "\n";
 	}

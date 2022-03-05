@@ -29,13 +29,13 @@ function mostrar()
 	while(contador < 10)
 	{
 		kilosPorBolsa = parseInt(prompt("Por favor ingrese la cantidad de kilos de la bolsa."));
-		while(kilosPorBolsa < 1 || KilosPorBolsa > 500)
+		while(kilosPorBolsa < 1 || kilosPorBolsa > 500)
 		{
 			kilosPorBolsa = parseInt(prompt("La cantidad de kilos ingresados es incorrecta, intentelo nuevamente."));
 		}
 
 		saborAlimento = prompt("Por favor ingrese el sabor del alimento.").toLowerCase();
-		while(saborAlimento != "carne" && SaborAlimento != "vegetales" && SaborAlimento != "pollo")
+		while(saborAlimento != "carne" && saborAlimento != "vegetales" && saborAlimento != "pollo")
 		{
 			saborAlimento = prompt("El sabor ingresado no está disponible, intentelo nuevamente.").toLowerCase();
 		}
@@ -69,7 +69,7 @@ function mostrar()
 	promedioKilosCarne = kilosSaborCarne / contadorBolsasCarne;
 
 	document.write("El promedio de los kilos totales es de " + promedioKilosTotales + "kg.");
-	document.write("<br>La bolsa más liviana es de " + saborAlimento + " y pesa " + PesoBolsaLiviana + "kg.");
+	document.write("<br>La bolsa más liviana es de " + saborAlimento + " y pesa " + pesoBolsaLiviana + "kg.");
 	document.write("<br>Y la cantidad de bolsas sabor carne es de " + contadorBolsasCarne + " bolsas y el promedio es de " + promedioKilosCarne + "kg.")
 }
 

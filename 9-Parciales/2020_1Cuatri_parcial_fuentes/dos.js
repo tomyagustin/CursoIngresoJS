@@ -1,4 +1,89 @@
 /*
+2)De una compra debes ingresar una cantidad indeterminada de cortes de carne vacuna,
+ validando los siguientes datos:
+
+nombre del corte, precio, peso en kilogramos, tipo(con hueso o sin hueso)
+a)informar el peso total de la compra.
+b)el nombre del corte más caro de los sin hueso.
+c)el nombre del corte más liviano de los con hueso.
+*/
+
+function mostrar()
+{
+
+  let nombreCorte;
+  let precio;
+  let pesoKg;
+  let pesoTotal;
+  let tipo;
+  let respuesta;
+
+
+while(respuesta == "si")
+{
+nombreCorte = prompt("Ingresa el nombre del corte");
+precio = prompt("Ingresa el precio");
+precio = parseInt(precio);
+pesoKg = prompt("Ingresa el peso en kilogramos");
+pesoKg = parseInt(pesokg);
+tipo = prompt("Ingresa el tipo: hueso/sin hueso")
+while(tipo != "hueso" && tipo != "sin hueso")
+{
+  tipo = prompt("Ingresa nuevamente una de las opciones")
+}
+
+
+pesoTotal = pesoTotal + pesoKg;
+}
+
+
+
+
+
+
+
+
+
+}
+
+
+
+// https://www.onlinegdb.com/5FPhgEQ5F
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 Realizar el algoritmo que permita ingresar los datos de una compra productos de la construccion, hasta que el cliente quiera:
 Tipo validad("arena";"cal";"cemento")
 Cantidad de bolsas,
@@ -10,7 +95,7 @@ a) El importe total a pagar , bruto sin descuento y...
 b) el importe total a pagar con descuento(solo si corresponde)
 d) Informar el tipo con mas cantidad de bolsas.
 f) El tipo mas caro
-*/
+
 
 function mostrar()
 {
@@ -153,3 +238,4 @@ function mostrar()
       alert(mensaje);
 }
 }
+*/
